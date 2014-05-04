@@ -1,83 +1,55 @@
 freshMRI
 ==========
 
-HowTo set up up a neuroimaging data analysis environment in OS X Mavericks using [Homebrew](brew.sh).
-wem3@uoregon.edu
-updated: 20140501
-This guide borrows liberally from [stowler's setupNeuroimagingEnvironment.md](https://github.com/stowler/brainwhere/blob/master/docs/setupNeuroimagingEnvironment.md).  
-
+How to set up up a neuroimaging data analysis environment in OS X Mavericks using [Homebrew](brew.sh).
 
 There are some truly excellent neuroimaging tools that are widely available and easy to use. Many neuroimagers are not (yet) computer scientists, however, and installing different software packages can be a bit of a challenge. This document is intended to make it a little bit easier to set up a Mac for neuroimaging data analysis.
 
-If you're already a whiz-bang programmer, the pace of this guide may be a little slow, and if you do all of your neuroimaging data analysis remotely on a university super-computer, then someone else may manage the installation and maintenance of these sorts of tools for you. If, however, you want to set up a gnarly machine to crunch data locally, or even just install these programs on your laptop so that you can look at results or build jobs, this guide might help. It assumes that you have a fresh working install of Mac OS X Mavericks (10.9) and an administrator account on the computer (which may be necessary for some tools, although we try to avoid gratuitous sudo when possible). 
+Detailed explanations of each package can be found in the respective .md files. In the interest of keeping this even remotely short, current explanations are limited.
 
-Xcode
+The code blocks are set up so that you can copy/paste them directly into a Terminal.app window (or whatever terminal you like to use). If you're not sure what that means, see [getting started](gettingstarted.md).
+
+[Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12): command line tools
 ==================
 
-In order to build some of the tools we'll need (including Homebrew), we need to have the Command Line Tools from [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) installed. You can install X-Code from the Mac App Store, but if you want to save space on your hard drive (it's a big application), you can install just the Command Line Tools. To do so, open up Terminal.App (in /Applications/Utilities), or whatever your favorite terminal is.  
-
-At the command prompt, type:  
+We don't need the whole package, just the Command Line Tools, which are now offered in a separate download.
 ```
-xcode-select --install
-```  
-(and press 'Enter')
-*Note: all future code blocks assume that you press 'Enter' to execute the code*  
-
+$ xcode-select --install
+```
 A pop-up window will ask if you would like to install the tools. Select 'Install' ([here is a step-by-step guide with screenshots](http://www.computersnyou.com/2025/2013/06/install-command-line-tools-in-osx-10-9-mavericks-how-to/)).
 
-
-Homebrew
+[Homebrew](brew.sh): package management
 ==================
 
-Homebrew is a package manager. It helps you to install pieces of software that don't come with OS X by default, and also helps to make sure that none of those programs cause messy interactions with files your system needs to run properly. Hombrew Casks can install applications that aren't necessarily hard to install via drag n' drop, but with the added conveniences of easy updates, uninstallation, and organization.
-
-To install Homebrew, open up Terminal.App (in /Applications/Utilities), or whatever your favorite terminal is.
-
-At the command prompt, paste:
 ```
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"  
-```
-
-Give your system a quick check-up, and run:  
-```
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew doctor
-```  
-If everything went smoothly, it should read:  
 ```
-system is ready to brew
-```  
+If everything is cool, it will return 'system ready to brew.' Otherwise, follow the instructions it gives.
 
-The doctor will offer helpful suggestions if anything is amiss, and suggest that you post a bug report if it doesn't have an answer for you.  
-
-You can update Homebrew itself with:  
+Tap the caskroom, tap versions (so we can install ST3), install brew-cask
 ```
-brew update
-```
-
-or upgrade all packages installed with:  
-```
-brew upgrade
-```  
-Things move pretty fast in brewworld, so update frequently.  
-
-Let's use Homebrew to actually install something... the capability to use Homebrew Casks:
-```
-brew tap caskroom/cask  
+brew tap caskroom/cask
+brew tap caskroom/versions
 brew install brew-cask
 ```
 
-Now we can use homebrew-cask to install [XQuartz](http://xquartz.macosforge.org). The GUI interfaces for a number of imaging tools require an X-11 windowing system (which is what XQuartz is), and if you interact with a cluster remotely, you probably use a similar interface.
+To keep brews up to date, you can do
+```
+brew upgrade
+```
+To update Homebrew itself,
+```
+brew update
+```
+Things move pretty fast in brewworld, so update frequently.
+
+[XQuartz](http://xquartz.macosforge.org): X-11 interface
+==================
 ```
 brew cask install xquartz
 ```
 Before XQuartz will work, you need to log out and log back in (although if you want to be thorough, a hard reboot never hurts).
-
-If you don't spend a lot of time in the world of command line interfaces, this may seem like an awful lot of work to install XQuartz, which you could have done from a browser window in about 30 seconds. What's more, it isn't entirely clear you even *need* XQuartz.  This is actually one of the things that's so great about Homebrew proper: it manages dependencies *for* you. A lot of neuroimaging software isn't entirely self-contained like YourFavortieApplication.App, and probably depends on other low-level system files that live the dark recesses of your computer and can be difficult to access through a Finder window (and are sometimes even entirely hidden). 
-
-FSL, for example, installs by default into /usr/local. Once you start setting up shop in /usr/local and the like, if you don't keep track of permissions and bindings and paths. Letting Homebrew help manage these sorts of issues can make your life a whole lot easier, and also allow you to do hardcore data analysis while keeping the "it just works" functionality of your Mac in tact.
-
-If we could install *everything* through Homebrew, life would be a lot easier. Another 
-
 
 FSL
 ==================
@@ -102,7 +74,7 @@ There are multiple ways to install (as of May 2013). I get mixed results with th
     ```
     fslDownload=fsl-5.0.2.2-macosx.tar.gz
     fslDestDir="/usr/local"
-    fslMD5=`md5 ${fslDownload} | awk '{ print $NF}'` 
+    fslMD5=`md5 ${fslDownload} | awk '{ print $NF}'`
     python fslinstaller.py -d ${fslDestDir} -f ${fslDownload} -C ${fslMD5}
     ```
 
@@ -111,7 +83,7 @@ There are multiple ways to install (as of May 2013). I get mixed results with th
 
     ```
     #    WARNING: note the \${escapedVariables} below, which
-    #    are escaped for heredoc (http://goo.gl/j3HMJ). 
+    #    are escaped for heredoc (http://goo.gl/j3HMJ).
     #    Un-escape them if manually typing into a text editor.
     #    Otherwise, just paste these lines to your bash prompt
     #    (up to and including "EOF" line):
@@ -120,7 +92,7 @@ There are multiple ways to install (as of May 2013). I get mixed results with th
     editTime=$(date +%k%M)
     sudo tee -a /etc/bashrc >/dev/null <<EOF
     #------------------------------------------
-    # on ${editDate} at ${editTime}, user $USER 
+    # on ${editDate} at ${editTime}, user $USER
     # added some FSL setup:
     FSLDIR=/usr/local/fsl
     PATH=\${FSLDIR}/bin:\${PATH}
@@ -129,7 +101,7 @@ There are multiple ways to install (as of May 2013). I get mixed results with th
     #------------------------------------------
     EOF
     #
-    cat /etc/bashrc 
+    cat /etc/bashrc
     ```
 
 Either log out and back in again, or issue this terminal command:
@@ -179,9 +151,9 @@ AFNI
 Installing AFNI on Mac OS X Mountain/Lion:
 ------------------------------------------------------------
 
-Before installing FSL, freesurfer, or  AFNI on Mountain/Lion be sure to install [XQuartz](http://xquartz.macosforge.org), and logout and then back in. 
+Before installing FSL, freesurfer, or  AFNI on Mountain/Lion be sure to install [XQuartz](http://xquartz.macosforge.org), and logout and then back in.
 
-Then download latest AFNI for Mac, unzip, and move to a reasonable location: 
+Then download latest AFNI for Mac, unzip, and move to a reasonable location:
 
     cd ~/Downloads
     curl -O http://afni.nimh.nih.gov/pub/dist/tgz/macosx_10.7_Intel_64.tgz
@@ -191,7 +163,7 @@ Then download latest AFNI for Mac, unzip, and move to a reasonable location:
 Add AFNI's new location to the path in /etc/bashrc :
 
     #    WARNING: note the \${escapedVariables} below, which
-    #    are escaped for heredoc (http://goo.gl/j3HMJ). 
+    #    are escaped for heredoc (http://goo.gl/j3HMJ).
     #    Un-escape them if manually typing into a text editor.
     #    Otherwise, just paste these lines to your bash prompt
     #    (up to and including "EOF" line):
@@ -200,7 +172,7 @@ Add AFNI's new location to the path in /etc/bashrc :
     editTime=$(date +%k%M)
     sudo tee -a /etc/bashrc >/dev/null <<EOF
     #------------------------------------------
-    # on ${editDate} at ${editTime}, user $USER  
+    # on ${editDate} at ${editTime}, user $USER
     # added some AFNI environmental variables:
     export PATH=/usr/local/abin:${PATH}
     export AFNI_ENFORCE_ASPECT=YES
@@ -222,7 +194,7 @@ Add AFNI's new location to the path in /etc/bashrc :
 
 Either log out and back in again, or issue this terminal command:
 
-    . /etc/bashrc 
+    . /etc/bashrc
 
 TEST: Open a new terminal window and test your afni install by issuing the command "afni" (no quotes) to open GUI. Confirm whether AFNI_ENFORCE_ASPECT is working effectively (see below)
 
@@ -286,7 +258,7 @@ Install MRIcroGL on Mac OS X Mountain/Lion:
 1. Download the [latest version](http://www.mccauslandcenter.sc.edu/mricrogl/).
 NB: pay attention to downloaded filename: if you already had osx.zip in your Downloads folder from mricrON, this mricrogl download may get called "osx(1).zip" etc.
 
-2. Unzip and install it: 
+2. Unzip and install it:
 
     ```
     cd ~/Downloads
@@ -316,9 +288,9 @@ Install FIJI on Mac OS X Mountain/Lion:
     open fiji-macosx.dmg
     cp -R /Volumes/Fiji/Fiji.app /Applications/
     hdiutil unmount /Volumes/Fiji
-    open /Applications/Fiji.app 
+    open /Applications/Fiji.app
     ```
-    
+
 Install ImageJ plugins:
 -----------------------------------------------------------------
 
@@ -344,11 +316,11 @@ Download and install the [imagej nifti plugin](http://rsb.info.nih.gov/ij/plugin
   ```
 
    * Re-open imagej/fiji. Opening nii.gz files should now work via drag & drop, or File->Import->Nifti/Analyze.
-   * Also should now see five new commands in imagej/fiji:  
-     * File/Import/NIfTI-Analyze, 
-     * File/Save As/Analyze (NIfTI-1), 
-     * File/Save As/NIfTI-1, 
-     * File/Save As/Analyze 7.5 and 
+   * Also should now see five new commands in imagej/fiji:
+     * File/Import/NIfTI-Analyze,
+     * File/Save As/Analyze (NIfTI-1),
+     * File/Save As/NIfTI-1,
+     * File/Save As/Analyze 7.5 and
      * Analyze/Tools/Coordinate Viewer
 
 * The [Tudor DICOM](http://santec.tudor.lu/project/dicom) plugin provides a number of DICOM-related functions, including the ability to parse a DICOMDIR
@@ -367,28 +339,28 @@ file and inspect its images interactively. It can also act as a DICOM receiver.
    		* If java 3D is not already installed, will display message "Java 3D seems not to be installed. Auto-install?"
    		* Allow installation. Shouldn't ask about destination.
    		* Restart imagej/fiji as a normal user and attempt to open 3D viewer again. Should not produce message about java 3D installation.
-  
 
-  
+
+
 
 SPM (Mountain Lion)
 =========================
 
 1. Download the latest [SPM 8 package](http://www.fil.ion.ucl.ac.uk/spm/software/spm8/)
 
-2. Unzip the downloaded SPM package and move the resulting SPM folder to /usr/local , 
+2. Unzip the downloaded SPM package and move the resulting SPM folder to /usr/local ,
    so that SPM program files are not in /usr/local/spm.
 
 3. Open matlab and issue the command "userpath;" (no quotes). This will tell you what
-   folder Matlab is going to look in for certain files. You care about this folder because 
+   folder Matlab is going to look in for certain files. You care about this folder because
    in the next step you are going to create a special file that gets placed there.
 
-4. In the Matlab window issue the command "pathtool;" (no quotes). This opens a new window. 
-   In this window, add /usr/local/spm to the list of folders that Matlab searches for files. 
+4. In the Matlab window issue the command "pathtool;" (no quotes). This opens a new window.
+   In this window, add /usr/local/spm to the list of folders that Matlab searches for files.
    (NB: Upon clicking "save", this window may complain about problems creating a file called pathdef.m, and ask you where you would like to put this file. Put it on the folder that was returned by the userpath command you entered earlier.)
 
 5. Test your installation by closing and then reopening Matlab. Type "spm;" (no quotes) at the Matlab prompt, and the SPM graphical user interface should open.
 
 Acknowledgments
 =========================
-This guide borrows liberally from [stowler's setupNeuroimagingEnvironment.md](https://github.com/stowler/brainwhere/blob/master/docs/setupNeuroimagingEnvironment.md).  
+This guide borrows liberally from [stowler's setupNeuroimagingEnvironment.md](https://github.com/stowler/brainwhere/blob/master/docs/setupNeuroimagingEnvironment.md).
