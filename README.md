@@ -13,7 +13,7 @@ The guide is broken up into several parts:
   If you are a whiz-bang programmer, you can probably skip the rest of this part (unless you want to check it out and offer some helpful suggestions!), but if not familiar with using the command line, this is a good time to get that way. For the completely CLI-naive, here's a nice quick and dirty intro to the CLI from [Lifehacker](http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything). To go a little more in depth, FSL hosts a [Basic Unix Tutorial](http://fsl.fmrib.ox.ac.uk/fslcourse/unix_intro/) that gets advanced pretty quickly. Here are some of the bare bones:
 
 There are plenty of alternatives to Terminal.app, the command line interface (CLI) that comes standard with OS X, but unless you have a strong alternate preference already, this one is a great application.
-![/Applications/Utilities/Terminal](https://github.com/wem3/freshMRI/images/Terminal_Finder.png "Navigate to /Applications/Utilities/Terminal in Finder")
+![/Applications/Utilities/Terminal](https://github.com/wem3/freshMRI/blob/master/images/Terminal_Finder.png "Navigate to /Applications/Utilities/Terminal in Finder")
 
 You can change the appearance of the Terminal window in Preferences-> Settings (I like 'Homebrew' or 'Pro'). It's good idea to keep the Terminal app in your dock or somewhere else that's easy to access, as we'll be using it a lot.
 
