@@ -1,4 +1,4 @@
-freshMRI: README.md
+freshMRI_000 (README.md): getting started
 ==========
 
 There are some truly excellent neuroimaging tools that are widely available and easy to use. Many neuroimagers are not (yet) computer scientists, however, and installing different software packages can be a bit of a challenge. This guide is intended to make it a little bit easier to set up a Mac for neuroimaging data analysis.
@@ -29,4 +29,4 @@ Instead, try
 ```bash
 echo 'freshMRI is totally blowing my mind'
 ```
-Most of the rest of the instructions in this tutorial will be paste-able directly into your command window. Whenever you're ready, head on to freshMRI_001.md.
+Most of the rest of the instructions in this tutorial will be paste-able directly into your command window. Whenever you're ready, head on to [freshMRI_001.md](https://github.com/wem3/freshMRI/raw/master/freshMRI_001.md).
