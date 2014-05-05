@@ -27,4 +27,4 @@ Instead, try
 ```bash
 echo 'freshMRI is totally blowing my mind'
 ```
-Most of the rest of the instructions in this tutorial will be paste-able directly into your command window. Whenever you're ready, head on to [freshMRI_001.md](https://github.com/wem3/freshMRI/raw/master/freshMRI_001.md).
+Most of the rest of the instructions in this tutorial will be paste-able directly into your command window. Whenever you're ready, head on to [freshMRI_001.md](https://github.com/wem3/freshMRI/blob/master/freshMRI_001.md).
