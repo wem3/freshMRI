@@ -9,29 +9,29 @@ We don't need the whole package, just the Command Line Tools, which are now offe
 ```bash
 xcode-select --install
 ```
-A pop-up window will ask if you would like to install the tools. Select 'Install' ([here is a step-by-step guide with screenshots](http://www.computersnyou.com/2025/2013/06/install-command-line-tools-in-osx-10-9-mavericks-how-to/)).
+A pop-up window will ask if you would like to install the tools. Select 'Install.' It's pretty straightforward, but ([here is a step-by-step walkthrough with screenshots](http://www.computersnyou.com/2025/2013/06/install-command-line-tools-in-osx-10-9-mavericks-how-to/)).
 
-###[Homebrew](brew.sh): package management
+###[Homebrew](brew.sh): package management for command line tools
 
-Homebrew
+There's a GUI-based front-end now called [Cakebrew](https://www.cakebrew.com/) if you absolutely detest the command line. I haven't tested Cakebrew extensively, but have always had bad experiences in the past with graphical interfaces to package management. Use your judgment.
 
+To install Homebrew from the line:
 ```bash
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew doctor
 ```
-If everything is cool, it will return 'system ready to brew.' Otherwise, follow the instructions it gives.
+If everything is cool, it will return 'system ready to brew.' Otherwise, do just what the doctor orders.
 
-Tap the caskroom, tap versions (so we can install ST3), install brew-cask
+###[Homebrew Cask](caskroom.io): package management for GUI-based tools
 ```bash
-brew tap caskroom/cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 ```
-All of the casks are installed by default to ~/Applications (well, they're symbolically linked there anyway). You can instead have brew-cask install to /Applications if you'd prefer with the following code:
+All of the applications installed via casks are placed by default in ~/Applications (well, they're symbolically linked there). You can instead have brew-cask install to /Applications if you'd rather with the following code:
 ```bash
 brew cask --appdir=/Applications
 ```
 
-To keep brews up to date, you can do
+To keep brews (and casks) up to date, you can do
 ```bash
 brew upgrade
 ```
@@ -39,7 +39,7 @@ To update Homebrew itself,
 ```bash
 brew update
 ```
-Things move pretty fast in brewworld, so update frequently.
+Things change pretty fast in brewland, so update frequently.
 
 ###[Sublime Text](http://www.sublimetext.com/3): text editor (but an unstoppably awesome text editor indeed)
 
