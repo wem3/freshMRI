@@ -2,7 +2,7 @@ freshMRI 001: system tools
 ==========
 
 These programs are essential to the freshMRI approach to setting up neuroimaging environments. Space saving tips will be provided where possible to keep the system lean and mean, but other than Sublime Text, these are all absolutely mandatory.
-
+![system tools](https://github.com/wem3/freshMRI/raw/master/images/freshMRI_001.png "xcode (CLT) homebrew brew-cask sublime text 3")
 ###[Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12): command line tools
 
 We don't need the whole package, just the Command Line Tools, which are now offered in a separate download.
