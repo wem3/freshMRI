@@ -17,13 +17,7 @@ There are plenty of alternatives to Terminal.app, the command line interface (CL
 
 You can change the appearance of the Terminal window in Preferences-> Settings (I like 'Homebrew' or 'Pro'). It's good idea to keep the Terminal app in your dock or somewhere else that's easy to access, as we'll be using it a lot.
 
-In your Terminal window, there's a prompt on the left-most side of the screen that says something like:
-```bash
-RickyMcMRI's-MacBook-Pro:~ricky$
-```
-(the specifics aren't important).
-
-Often times, code blocks use a '$' or '>' to indicate the prompt, but if you try to copy/paste
+In your Terminal window, there's a prompt on the left-most side of the screen that says something like 'RickyMcMRI's-MacBook-Pro:~ricky' (the specifics aren't important). Often times, code blocks use a '$' or '>' to indicate the prompt, but if you try to copy/paste
 ```bash
 $ echo 'freshMRI is totally blowing my mind'
 ```
