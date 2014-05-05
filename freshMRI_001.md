@@ -6,8 +6,8 @@ These programs are essential to the freshMRI approach to setting up neuroimaging
 ###[Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12): command line tools
 
 We don't need the whole package, just the Command Line Tools, which are now offered in a separate download.
-```
-$ xcode-select --install
+```bash
+xcode-select --install
 ```
 A pop-up window will ask if you would like to install the tools. Select 'Install' ([here is a step-by-step guide with screenshots](http://www.computersnyou.com/2025/2013/06/install-command-line-tools-in-osx-10-9-mavericks-how-to/)).
 
@@ -15,14 +15,14 @@ A pop-up window will ask if you would like to install the tools. Select 'Install
 
 Homebrew
 
-```
+```bash
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew doctor
 ```
 If everything is cool, it will return 'system ready to brew.' Otherwise, follow the instructions it gives.
 
 Tap the caskroom, tap versions (so we can install ST3), install brew-cask
-```
+```bash
 brew tap caskroom/cask
 brew install brew-cask
 ```
@@ -32,11 +32,11 @@ brew cask --appdir=/Applications
 ```
 
 To keep brews up to date, you can do
-```
+```bash
 brew upgrade
 ```
 To update Homebrew itself,
-```
+```bash
 brew update
 ```
 Things move pretty fast in brewworld, so update frequently.
@@ -53,7 +53,7 @@ brew cask install sublime-text-3
 ```
 
 ###[XQuartz](http://xquartz.macosforge.org): X-11 interface
-```
+```bash
 brew cask install xquartz
 ```
 Before XQuartz will work, you need to log out and log back in (although if you want to be thorough, a hard reboot never hurts).
