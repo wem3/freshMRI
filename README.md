@@ -5,10 +5,10 @@ Free and open source tools for neuroimaging data analysis are easier to obtain a
 
 This repository is designed to assuage the confusion and/or frustration involved in _getting ready_ to do some science (there is no panacea insofar as the confusion/frustration involved in _doing_ said science).  
 
-[freshMRI_000](https://github.com/wem3/raw/master/freshMRI/freshMRI_000.md): introduction, getting to the command line  
+[freshMRI_000](https://github.com/wem3/freshMRI/blob/master/freshMRI_000.md): introduction, getting to the command line  
 
-[freshMRI_001](https://github.com/wem3/raw/master/freshMRI/freshMRI_001.md): system setup - basic tools  
+[freshMRI_001](https://github.com/wem3/freshMRI/raw/master/freshMRI_001.md): system setup - basic tools  
 
-[freshMRI_002](https://github.com/wem3/raw/master/freshMRI/freshMRI_002.md): system setup - python  
+[freshMRI_002](https://github.com/wem3/freshMRI/raw/master/freshMRI_002.md): system setup - python  
 
 ----------

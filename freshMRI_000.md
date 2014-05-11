@@ -1,6 +1,6 @@
 freshMRI_000: introduction, getting to the command line
 ----------
-### Intro:
+### Resources:
 If you are a whiz-bang programmer, you can probably skip the rest of this part (unless you want to help make it better!), but if you're not familiar with using a Command Line Interface (CLI), there's no time like the present...  
 
 Here are some resources to learn more about the command line:  
