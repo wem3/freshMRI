@@ -1,14 +1,27 @@
 freshMRI: README.md
 ==========
 
-Free and open source tools for neuroimaging data analysis are easier to obtain and use than ever before, but if you're coming to the table with questions like "what the heck is a shell script?" (like I did), setting up your computer so that all the tools work in harmony can be a major hurdle.
+This repository is a collection of tools and tutorials to facilitate neuroimaging data analysis, from installation and configuration of necessary software to presentation and dissemination of results.
 
-This repository is designed to assuage the confusion and/or frustration involved in _getting ready_ to do some science (there is no panacea insofar as the confusion/frustration involved in _doing_ said science).  
+You can simply download the files with the 'Download ZIP' button immediately to the right, but this is designed to be a collaborative effort, so if you want to help out, [set up a GitHub account][1], [fork the repository][2], and start adding content or start making changes!
 
-[freshMRI_000](https://github.com/wem3/freshMRI/blob/master/freshMRI_000.md): introduction, getting to the command line  
 
-[freshMRI_001](https://github.com/wem3/freshMRI/raw/master/freshMRI_001.md): system setup - basic tools  
+Content is organized in the following way.
+###papers
+---
+academic publications, completed or in progress
 
-[freshMRI_002](https://github.com/wem3/freshMRI/raw/master/freshMRI_002.md): system setup - python  
+###stim
+---
+tools for stimulus presentation
+
+###system
+---
+instructions on setting up your computer to be a neuroimaging powerhouse
+
+###images
+---
+this is for pictures that accompany tutorials (not whole brain volumes)
+
 
 ----------
