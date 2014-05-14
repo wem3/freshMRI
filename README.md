@@ -1,6 +1,6 @@
 freshMRI: README.md
 ==========
-![freshMRI](https://github.com/wem3/freshMRI/blob/master/images/freshMRI_stand.png)
+![freshMRI](https://github.com/wem3/freshMRI/raw/master/images/freshMRI_stand.png)
 
 This repository is a collection of tools and tutorials to facilitate neuroimaging data analysis, from installation and configuration of necessary software to presentation and dissemination of results.
 
