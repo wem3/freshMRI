@@ -1,9 +1,24 @@
-function trial_order = calculate_trial_order(type,num)
+%
+% function trial_order = calculate_trial_order(type,num)
+%
+% Author: Emily Falk
+% Edited: Will Moore <wem3@uoregon.edu>
+% Last Revision: 05/15/14
+%
+% Function: calculate_trial_order
+%
+% Purpose: takes in the vector "type" and the vector "num" associated
+% with the MSS script, and sorts them according to the rules of MacStim
+%
+% Parameters: type, num
+%
+% Return: trial_order
+%
+% NOTE!  BLOCK MAC STIM ORDERING OPTIONS NOT IMPLEMENTED HERE-- NO BLOCK
+% OPTION 'b', Option 'r' is still in beta
+%
 
-%this function takes in the vector "type" and the vector "num" associated
-%with the MSS script, and sorts them according to the rules of MacStim
-%NOTE!  BLOCK MAC STIM ORDERING OPTIONS NOT IMPLEMENTED HERE-- NO BLOCK
-%OPTION 'b', Option 'r' is still in beta
+function trial_order = calculate_trial_order(type,num)
 
 default_order = 1:length(type); %sets default to consecutive, single trial order
 
@@ -29,15 +44,15 @@ end;
 try
     if isempty(find(type~='s')) | isempty(find(type~=0)) %if all single trials or if not specified
         trial_order = 1:length(type);
-        return; 
+        return;
     end;
 
-    num(find(num==0)) = 1; %change default padded values (zeros) to ones to prepare for randomization        
-    trial_order = 1:length(type);     
+    num(find(num==0)) = 1; %change default padded values (zeros) to ones to prepare for randomization
+    trial_order = 1:length(type);
     begin_block = -1;
 
     for i = 1:length(type)
-        if type(i) == 'r' && begin_block < 0 
+        if type(i) == 'r' && begin_block < 0
             begin_block = i;
         end
         if type(i)~= 'r' && begin_block > 0
@@ -51,9 +66,9 @@ try
     if type(end) == 'r' && begin_block > 0
         trial_order(begin_block:i) = randomize_block(num,begin_block,length(type));
     end;
-    
+
 catch
-    fprintf('\nPROBLEM! I didn''t understand your input for type or num. \nMake sure that number of ''r''s and nums make sense.\n!!!FALLING BACK TO DEFAULT ORDER!!!\n');  
+    fprintf('\nPROBLEM! I didn''t understand your input for type or num. \nMake sure that number of ''r''s and nums make sense.\n!!!FALLING BACK TO DEFAULT ORDER!!!\n');
     trial_order = default_order;
 end;
 

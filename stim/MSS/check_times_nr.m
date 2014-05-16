@@ -1,15 +1,30 @@
+%
+% function cleaned = check_times-nr(direc)
+%
+% Author: Emily Falk
+% Edited: Will Moore <wem3@uoregon.edu>
+% Last Revision: 05/15/14
+%
+% Function: check_times-nr
+%
+% Purpose: cycle through the directories containing existing data,
+%          pull out key information used in analysis, create a structure,
+%          and save it as part of the original .mat data file
+%
+% Parameters: direc (directory of behavioral output files)
+%
+% Return: cleaned data
+%
+%
+
 function cleaned = check_times_nr(direc)
-%function cleaned = cleaner_analysis(direc)
-%This script will cycle through the directories containing my existing data
-%and will pull out key information used in analysis, create a structure,
-%and save it as part of the original .mat data file
 
 cd(direc);
 k= 1;
 %get directory info
 for j = 201:220
     d = dir(int2str(j));
-    for i=1:length(d) 
+    for i=1:length(d)
         if regexp(d(i).name,'\.mat$','ONCE')
             %fprintf('\n*********** cleaning %s\n ***********\n',d(i).name)
             clear run_info
