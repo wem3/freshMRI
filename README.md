@@ -4,7 +4,7 @@ freshMRI: README.md
 Publicly available fMRI data and an abundance of free/open source tools to crunch it down are setting a stage where anyone with a good question can carry out a neuroimaging data analysis. We've com along way since 1992, when each lab rolled their own code and 
 fMRI is hard. Even with a solid background in math, physics, biology, psychology, and image processing, the [Handbook of fMRI Data Analysis](http://www.fmri-data-analysis.org/) lays out a prerequisite that can be a major stumbling block for potential neuroimagers:
 
-> "It is our opinion that one simply cannot become an effective user of fMRI analysis without strong computer programming skills." [(p. 11; Poldrack, Nichols, & Mumford)](http://www.fmri-data-analysis.org/)
+> "It is our opinion that one simply cannot become an effective user of fMRI analysis without strong computer programming skills." (p. 11; Poldrack, Nichols, & Mumford, 2011)
 
 'Effective' is the key word here. You don't *have* to be a computer whiz to plod your way from dicoms to blobs. Graphic interfaces to several fMRI software packages are robust enough that you *could* do a whole project without ever looking at any code. Riding that GUI all the way to magic-*p*, however, will require a steady hand and an eagle eye. Be sure to take meticulous notes, because these will be your only record of what you did. Steel yourself for the upcoming do-overs as your advisor or reviewers suggest new analyses. May your mouse strike ever straight and true, your slice dimensions always overlay compatibly, and your otherwise empty bag of tricks contain at least some pheothiazines...     
 
