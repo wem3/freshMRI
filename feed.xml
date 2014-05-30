@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">freshMRI</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://wem3.github.io/freshMRI/feed.xml" />
+<link rel="alternate" type="text/html" href="http://wem3.github.io/freshMRI" />
+<updated>2014-05-30T10:39:48-07:00</updated>
+<id>http://wem3.github.io/freshMRI/</id>
+<author>
+  <name>freshMRI</name>
+  <uri>http://wem3.github.io/freshMRI/</uri>
+  <email>freshMRI.info@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[install xcode tools]]></title>
+ <link rel="alternate" type="text/html" href="http://wem3.github.io/freshMRI/osx/terminal/install-xcode-tools/" />
+  <id>http://wem3.github.io/freshMRI/osx/terminal/install-xcode-tools</id>
+  <published>2014-05-30T00:45:40-07:00</published>
+  <updated>2014-05-30T00:45:40-07:00</updated>
+  <author>
+    <name>freshMRI</name>
+    <uri>http://wem3.github.io/freshMRI</uri>
+    <email>freshMRI.info@gmail.com</email>
+  </author>
+  <content type="html">&lt;h3 id=&quot;xcodehttpsitunesapplecomusappxcodeid497799835mt12-command-line-tools&quot;&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/xcode/id497799835?mt=12&quot;&gt;Xcode&lt;/a&gt;: command line tools&lt;/h3&gt;
+
+&lt;p&gt;An AppStore install of Xcode.app clocks in at  a whopping 4GB. You can install the whole thing if you like, but we don’t really need the whole package, just the Command Line Tools.  &lt;/p&gt;
+
+&lt;p&gt;Once upon a time, you had to hack the specific tools you wanted out of the installer package. Now they are offered in a completely separate download that you can invoke with a built-in function.&lt;/p&gt;
+
+&lt;div class=&quot;window&quot;&gt;
+          &lt;nav class=&quot;control-window&quot;&gt;
+            &lt;a href=&quot;#finder&quot; class=&quot;close&quot; data-rel=&quot;close&quot;&gt;close&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;minimize&quot;&gt;minimize&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;deactivate&quot;&gt;deactivate&lt;/a&gt;
+          &lt;/nav&gt;
+          &lt;h1 class=&quot;titleInside&quot;&gt;Terminal&lt;/h1&gt;
+          &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;terminal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;$&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;line command&quot;&gt;xcode-select --install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+&lt;p&gt;A pop-up window will ask if you would like to install the tools. Select ‘Install.’ It’s pretty straightforward, but (&lt;a href=&quot;http://www.computersnyou.com/2025/2013/06/install-command-line-tools-in-osx-10-9-mavericks-how-to/&quot;&gt;here is a step-by-step walkthrough with screenshots&lt;/a&gt; if you’d like a tour of each click).  &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://wem3.github.io/freshMRI/osx/terminal/install-xcode-tools/&quot;&gt;install xcode tools&lt;/a&gt; was originally published by freshMRI at &lt;a href=&quot;http://wem3.github.io/freshMRI&quot;&gt;freshMRI&lt;/a&gt; on May 30, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[install SPM]]></title>
+ <link rel="alternate" type="text/html" href="http://wem3.github.io/freshMRI/install-spm/" />
+  <id>http://wem3.github.io/freshMRI/install-spm</id>
+  <published>2014-05-28T00:00:00-07:00</published>
+  <updated>2014-05-28T00:00:00-07:00</updated>
+  <author>
+    <name>freshMRI</name>
+    <uri>http://wem3.github.io/freshMRI</uri>
+    <email>freshMRI.info@gmail.com</email>
+  </author>
+  <content type="html">&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.fil.ion.ucl.ac.uk/spm/&quot;&gt;SPM&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; is the original gangster of open source neuroimaging software.&lt;/p&gt;
+
+&lt;p&gt;freshSPM is tailored for &lt;a href=&quot;http://www.fil.ion.ucl.ac.uk/spm/software/spm12/&quot;&gt;SPM12b&lt;/a&gt;, providing as much backward compatibility with SPM8 as possible. None of the freshMRI code is likely to work in older versions (though your old code may work in SPM8/SPM12b).  &lt;/p&gt;
+
+&lt;p&gt;SPM is far and away the easiest package to install (assuming you already have MATLAB installed). Unlike most of the other tools on freshMRI, You can probably get away with just downloading through a browser, clicking on the zipped file to extract it, and dragging it to &lt;code&gt;~/Documents/MATLAB&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are a number of reasons why this is not the best way to start a trek into the black heart of neuroimaging data analysis, but rather than digress further, let’s just take this as an opportunity to get in some practice with the command line.  &lt;/p&gt;
+
+&lt;h3 id=&quot;to-set-up-spm-freshmri-style&quot;&gt;To set up SPM freshMRI-style:&lt;/h3&gt;
+
+&lt;p&gt;First, insall MATLAB (whoever provides your site license should have instructions for how to do this).&lt;/p&gt;
+
+&lt;p&gt;Go to the &lt;a href=&quot;http://www.fil.ion.ucl.ac.uk/spm/software/spm12/&quot;&gt;SPM12b download page&lt;/a&gt;, fill out the brief form, and click the link:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/Download_spm12b.png&quot; alt=&quot;Download_spm12b.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If your browser is configured to let you select a download location, choose:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/save_spm12b_as.png&quot; alt=&quot;save_spm12b_as.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Fire up the Terminal.
+&amp;lt;div class=&quot;window&quot;&amp;gt;
+          &amp;lt;nav class=&quot;control-window&quot;&amp;gt;
+            &lt;a href=&quot;#finder&quot; class=&quot;close&quot; data-rel=&quot;close&quot;&gt;close&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;minimize&quot;&gt;minimize&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;deactivate&quot;&gt;deactivate&lt;/a&gt;
+          &amp;lt;/nav&amp;gt;
+          &amp;lt;h1 class=&quot;titleInside&quot;&amp;gt;Terminal&amp;lt;/h1&amp;gt;
+          &amp;lt;div class=&quot;container&quot;&amp;gt;&amp;lt;div class=&quot;terminal&quot;&amp;gt;&amp;lt;table&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td class=&#39;gutter&#39;&amp;gt;&amp;lt;pre class=&#39;line-numbers&#39;&amp;gt;&lt;span class=&quot;line-number&quot;&gt;$&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;$&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;$&lt;/span&gt;&amp;lt;/pre&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td class=&#39;code&#39;&amp;gt;&amp;lt;pre&amp;gt;&lt;code&gt;&lt;span class=&quot;line command&quot;&gt;cd ~/Documents/MATLAB&lt;/span&gt;&lt;span class=&quot;line command&quot;&gt;unzip spm12b.zip&lt;/span&gt;&lt;span class=&quot;line command&quot;&gt;matlab &amp;amp;&lt;/span&gt;&lt;/code&gt;&amp;lt;/pre&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;to-add-spm12b-to-the-path&quot;&gt;To add &lt;code&gt;spm12b&lt;/code&gt; to the path:&lt;/h3&gt;
+
+&lt;p&gt;Check out the post on how to &lt;a href=&quot;http://wem3.github.io/freshMRI/set-matlab-path/&quot;&gt;set the path in MATLAB&lt;/a&gt; for an in-depth graphical walkthrough. To add &lt;code&gt;spm12b&lt;/code&gt;, use the ‘Add Folder’ button &lt;strong&gt;(NOT ‘Add with Subfolders’)&lt;/strong&gt;. &lt;code&gt;spm&lt;/code&gt; does this automatically through its own functions, and it can confuse MATLAB if you choose ‘Add with Subfolders’&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/add_spm12b_to_path.png&quot; alt=&quot;add_spm12b_to_path.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can save the path with spm12b on it unless you have a reason not to (e.g., you’re working in another version of spm, you’re working with functions that conflict with spm’s, etc.).  &lt;/p&gt;
+
+&lt;h3 id=&quot;launch-that-sucker&quot;&gt;Launch that sucker:&lt;/h3&gt;
+
+&lt;p&gt;If all goes according to plan, hit the MATLAB Command Window&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; with:  &lt;/p&gt;
+
+&lt;div class=&quot;window&quot;&gt;
+          &lt;nav class=&quot;control-window&quot;&gt;
+            &lt;a href=&quot;#finder&quot; class=&quot;close&quot; data-rel=&quot;close&quot;&gt;close&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;minimize&quot;&gt;minimize&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;deactivate&quot;&gt;deactivate&lt;/a&gt;
+          &lt;/nav&gt;
+          &lt;h1 class=&quot;titleInside&quot;&gt;Terminal&lt;/h1&gt;
+          &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;terminal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;$&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;$&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;line command&quot;&gt;spm fmri&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt; ___  ____  __  __
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;/ __)(  _ \(  \/  )
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;\__ \ )___/ )    (   Statistical Parametric Mapping
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;(___/(__)  (_/\/\_)  SPM12b - http://www.fil.ion.ucl.ac.uk/spm/
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;SPM12b: v5918                                      03:31:09 - 29/05/2014
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;========================================================================
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;Initialising SPM                        :
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;.......done
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;SPM present working directory:
+&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;  /Users/wem3/matlab
+&lt;/span&gt;&lt;span class=&quot;line command&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+&lt;p&gt;It’s about to get real…&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;freshMRI stands by this claim despite the fact that it effectively depends on MATLAB. Although the neurds at freshMRI find &lt;em&gt;most&lt;/em&gt; of John Ashburner’s work absolutely riveting, &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3480642&quot;&gt;SPM: A history&lt;/a&gt;[] provides a shockingly down to earth explanation of many aspects of SPM that can be really confusing to new users (and perhaps acts as powerful antidote for any poor soul who has attempted to imbibe the heady and dangerous brew that is the official SPM manual).] &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;em&gt;Note: the MATLAB Command Window uses &lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; instead of &lt;code&gt;$&lt;/code&gt; as the prompt, but freshMRI will use &lt;code&gt;$&lt;/code&gt; for cross-language code-block compatibility&lt;/em&gt;   &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://wem3.github.io/freshMRI/install-spm/&quot;&gt;install SPM&lt;/a&gt; was originally published by freshMRI at &lt;a href=&quot;http://wem3.github.io/freshMRI&quot;&gt;freshMRI&lt;/a&gt; on May 28, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[matlab path definition of pathos]]></title>
+ <link rel="alternate" type="text/html" href="http://wem3.github.io/freshMRI/set-matlab-path/" />
+  <id>http://wem3.github.io/freshMRI/set-matlab-path</id>
+  <published>2014-05-26T00:00:00-07:00</published>
+  <updated>2014-05-26T00:00:00-07:00</updated>
+  <author>
+    <name>freshMRI</name>
+    <uri>http://wem3.github.io/freshMRI</uri>
+    <email>freshMRI.info@gmail.com</email>
+  </author>
+  <content type="html">&lt;h3 id=&quot;pathos&quot;&gt;pathos&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;noun&lt;/em&gt;&lt;br /&gt;
+a quality that evokes pity or sadness  &lt;/p&gt;
+
+&lt;h3 id=&quot;path-computing&quot;&gt;path &lt;em&gt;(computing)&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;noun&lt;/em&gt;&lt;br /&gt;
+a definition of the order in which an operating system or program searches for a file or executable program  &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Pathos may seem a poorly chosen rhetorical device in freshMRI’s ongoing argument against sloppy neuroimaging habits, but if you will entertain a metapathetic &lt;em&gt;argumentum ad passiones&lt;/em&gt;, reaching for hitherto unexperienced states of confusion, frustration, embarrassment, and/or shame, the motivation for cultivating an opinionated antipathy toward path-ignorance in all its many incarnations is clear as blobs.  &lt;/p&gt;
+
+&lt;p&gt;Issues surrounding paths are by no means isolated to MATLAB, but since MATLAB is so central to many neuroimaging workflows, it presents a good opportunity to start learning about what path means for getting your analyses done.  &lt;/p&gt;
+
+&lt;p&gt;Understanding the &lt;a href=&quot;http://www.mathworks.com/help/matlab/matlab_env/what-is-the-matlab-search-path.html&quot;&gt;MATLAB Search Path&lt;/a&gt; can spare you a lot of pain. MATLAB sets the &lt;em&gt;userpath&lt;/em&gt; to:  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/MATLAB_default_userpath.png&quot; alt=&quot;MATLAB_default_userpath.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;by default on OS X. &lt;strong&gt;freshMRI recommends against actually storing your neuroimaging packages in the Documents folder!&lt;/strong&gt; Perhaps you’re one of those hyper-organized individuals with an empty inbox, a spotless Desktop, and more free disk space than you know what to do with. For the rest of us, &lt;code&gt;~/Documents&lt;/code&gt; tends to rapidly devolve into a dumping ground for all manner of cruft, and loose code creeping into &lt;code&gt;~/Documents/MATLAB&lt;/code&gt; can really ruin your day.  &lt;/p&gt;
+
+&lt;p&gt;If you’ve installed FSL, you may have noticed that it creates a folder with fsl startup code (that actually contains an error, explain) at:  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/better_matlab_path.png&quot; alt=&quot;better_matlab_path.png&quot; /&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;~/matlab&lt;/code&gt; is a much better place to keep packages like &lt;code&gt;spm&lt;/code&gt; and functions that you want to stay on the path (like &lt;code&gt;startup.m&lt;/code&gt;).  &lt;/p&gt;
+
+&lt;p&gt;To add &lt;code&gt;~/matlab&lt;/code&gt; to the path, fire up MATLAB, and click the ‘Set Path’ button in the ‘Home’ tab of the toolbar:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/SetPath_button.png&quot; alt=&quot;SetPath_button.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This will bring up a dialogue like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/Set_Path_dialogue.png&quot; alt=&quot;Set_Path_dialogue.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To add &lt;code&gt;~/matlab&lt;/code&gt; to the search path, click ‘Add Folder’
+&lt;strong&gt;(NOT ‘Add with Subfolders’)&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/add_matlab_to_path.png&quot; alt=&quot;add_matlab_to_path.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click ‘Open.’ Save the path so that &lt;code&gt;~/matlab&lt;/code&gt; is in the search path when MATLAB starts up:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/save_matlab_path.png&quot; alt=&quot;save_matlab_path.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This can be extremely handy, but it also means that any loose .m files stored in &lt;code&gt;~/matlab&lt;/code&gt; will be automatically added to the path as well.  &lt;/p&gt;
+
+&lt;p&gt;This can cause huge headaches. &lt;code&gt;~/matlab&lt;/code&gt; is not the place to store study specific scripts, in progress code, or really anything other than functions you want MATLAB to have global access to or directories of code that you want to add to and remove from the MATLAB path as needed. Seriously. 80% of MATLAB issues can be resolved by fixing the MATLAB path. Leaving cruft in &lt;code&gt;~/matlab&lt;/code&gt; is a great way to break it.  &lt;/p&gt;
+
+&lt;p&gt;As mentioned previously, MATLAB on OS X sets the &lt;em&gt;userpath&lt;/em&gt; to &lt;code&gt;~/Documents/MATLAB&lt;/code&gt; by default. You can remove this directory from the path entirely (just invoke the ‘Set Path’ dialogue, choose ‘Remove Folder’ and then ‘Save’), but if you don’t, you’ll need to be hyper-vigilant about keeping &lt;code&gt;~/Documents/MATLAB&lt;/code&gt; clean as well. freshMRI recommends nuking that sucker.&lt;/p&gt;
+
+&lt;p&gt;Why, astute readers may ask, does the &lt;code&gt;~/matlab&lt;/code&gt; appear so full if it’s crucial to keep it free of cruft? All of the folders are neuroimaging packages, added and removed as necessary. All of the .m files are functions to which MATLAB has global access. More on that later…&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://wem3.github.io/freshMRI/set-matlab-path/&quot;&gt;matlab path definition of pathos&lt;/a&gt; was originally published by freshMRI at &lt;a href=&quot;http://wem3.github.io/freshMRI&quot;&gt;freshMRI&lt;/a&gt; on May 26, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[freshMRI - don't let the artichoke dry out]]></title>
+ <link rel="alternate" type="text/html" href="http://wem3.github.io/freshMRI/fresh-MRI/" />
+  <id>http://wem3.github.io/freshMRI/fresh-MRI</id>
+  <published>2014-05-25T00:00:00-07:00</published>
+  <updated>2014-05-25T00:00:00-07:00</updated>
+  <author>
+    <name>freshMRI</name>
+    <uri>http://wem3.github.io/freshMRI</uri>
+    <email>freshMRI.info@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;fMRI is hard. Even with a solid background in math, physics, biology, psychology, and image processing, the &lt;a href=&quot;http://www.fmri-data-analysis.org/&quot;&gt;Handbook of fMRI Data Analysis&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; lays out a prerequisite that can be a major stumbling block for potential neuroimagers:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“It is our opinion that one simply cannot become an effective user of fMRI analysis without strong computer programming skills.” (p. 11; Poldrack, Nichols, &amp;amp; Mumford, 2011)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;‘Effective’ is the key word here. You don’t &lt;em&gt;have&lt;/em&gt; to be a computer whiz to plod your way from dicoms to blobs. Graphic interfaces to several fMRI software packages are robust enough that you &lt;em&gt;could&lt;/em&gt; do a whole project without ever looking at any code. Riding that GUI all the way to magic-&lt;em&gt;p&lt;/em&gt;, however, will require a steady hand and an eagle eye. Be sure to take meticulous notes, because these will be your only record of what you did. Steel yourself for the upcoming do-overs as your advisor or reviewers suggest new analyses. May your mouse strike ever straight and true, your slice dimensions always overlay compatibly, and your otherwise empty bag of tricks contain at least some phenothiazines…&lt;/p&gt;
+
+&lt;p&gt;If, on the other hand, you occasionally spill drinks, slip decimals, or shut down without saving, don’t despair. While it’s true that some fundamental knowledge of the glowbox can definitely take a lot of pain and frustration out of fMRI data analysis, you don’t have to compile your own kernel from scratch (or even know what that means) to take advantage of the plethora of sweet neuroimaging software that enable large scale meta-analysis, streamlined data processing, and open source repositories for fMRI.  &lt;/p&gt;
+
+&lt;p&gt;Tools like:  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;neurosynth.org&quot;&gt;Neurosynth&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nipy.sourceforge.net/nipype&quot;&gt;Nipype&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;neurovault.org&quot;&gt;Neurovault&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://openfmri.org&quot;&gt;OpenfMRI&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;can all look pretty intimidating if you have questions along the lines of “what the heck is a shell script?”&lt;/p&gt;
+
+&lt;p&gt;freshMRI is here to facilitate the transition from clicking and pointing along according to whatever manual seems least incomprehensible to carrying out and designing your own bleeding edge neuroimaging data analyses. You can surf around the project in your browser, download a &lt;a href=&quot;https://github.com/wem3/freshMRI&quot;&gt;compressed version&lt;/a&gt; of all the guides and code, or make an account on &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;, &lt;a href=&quot;https://help.github.com/articles/fork-a-repo&quot;&gt;fork the repository&lt;/a&gt;, and help keep freshMRI, err, fresh!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Poldrack, R.A. Mumford, J.A. &amp;amp; Nichols, T.E. &lt;em&gt;Handbook of Functional MRI Data Analysis&lt;/em&gt;. Cambridge University Press, 2011. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://wem3.github.io/freshMRI/fresh-MRI/&quot;&gt;freshMRI - don't let the artichoke dry out&lt;/a&gt; was originally published by freshMRI at &lt;a href=&quot;http://wem3.github.io/freshMRI&quot;&gt;freshMRI&lt;/a&gt; on May 25, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[getting to the command line]]></title>
+ <link rel="alternate" type="text/html" href="http://wem3.github.io/freshMRI/get-to-the-command-line/" />
+  <id>http://wem3.github.io/freshMRI/get-to-the-command-line</id>
+  <published>2014-05-22T00:00:00-07:00</published>
+  <updated>2014-05-22T00:00:00-07:00</updated>
+  <author>
+    <name>freshMRI</name>
+    <uri>http://wem3.github.io/freshMRI</uri>
+    <email>freshMRI.info@gmail.com</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;its-all-about-the-cli&quot;&gt;It’s all about the CLI&lt;/h2&gt;
+
+&lt;p&gt;If you are a whiz-bang programmer, you can probably skip the rest of this post (unless you want to help make it better!), but if you’re not familiar with using a Command Line Interface (CLI), there’s no time like the present…  &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;clutch-resources&quot;&gt;clutch resources:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;peek&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&quot;&gt;Lifehacker’s quick and dirty CLI crash course&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;THE&lt;/em&gt; M to FR&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/mac/documentation/OpenSource/Conceptual/ShellScripting/CommandLInePrimer/CommandLine.html#//apple_ref/doc/uid/TP40004268-CH271-BBCBEAJD&quot;&gt;Mac Developer Library Command Line Primer&lt;/a&gt;[^1]&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sacred text on text sanctification&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line&quot;&gt;In the beginning was the command line&lt;/a&gt;[^2]  &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For the impatient, you can start bashing the terminal right away…  &lt;/p&gt;
+
+&lt;h2 id=&quot;terminalapp&quot;&gt;Terminal.app&lt;/h2&gt;
+
+&lt;p&gt;There are plenty of alternatives to Terminal.app, the command line interface (CLI) that comes standard with OS X, but unless you have a strong alternate preference already, this one is pretty great.  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wem3.github.io/freshMRI/images/Terminal_Finder.png&quot; alt=&quot;/Applications/Utilities/Terminal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can change the appearance of the Terminal window in Preferences-&amp;gt; Settings (I like ‘Homebrew’ or ‘Pro’). It’s good idea to keep the Terminal app in your dock or somewhere else that’s easy to access, as we’ll be using it a lot.  &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;code-blocks-on-freshmri&quot;&gt;Code Blocks on freshMRI&lt;/h2&gt;
+
+&lt;p&gt;The content of your default terminal prompt may vary based on a number of factors, but (for now), &lt;strong&gt;just ignore everything to the left of the &lt;code&gt;$&lt;/code&gt;&lt;/strong&gt;.  &lt;/p&gt;
+
+&lt;p&gt;Code blocks use a ‘$’ or ‘&amp;gt;’ to indicate the prompt, but if you try to copy/paste:  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;freshMRI is totally blowing my mind&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;into the terminal, you’ll get something like:  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;-bash: &lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;not found
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;On freshMRI, we’ll use &lt;a href=&quot;https://twitter.com/franklinwebber&quot;&gt;@franklinwebber&lt;/a&gt;’s fancy Terminal code blocks to represent both input and output.  &lt;/p&gt;
+
+&lt;p&gt;’$’ indicates the prompt.  &lt;/p&gt;
+
+&lt;p&gt;Anything after the ‘$’ is input.  &lt;/p&gt;
+
+&lt;p&gt;Anything in darker grey on a line without a ‘$’ is output.  &lt;/p&gt;
+
+&lt;p&gt;Copy/pasting from code from code blocks is great, that’s why we use em’, but be judicious (i.e., don’t copy the ‘$’ or the output)!  &lt;/p&gt;
+
+&lt;p&gt;See if you can make your terminal window match:&lt;/p&gt;
+
+&lt;div class=&quot;window&quot;&gt;
+          &lt;nav class=&quot;control-window&quot;&gt;
+            &lt;a href=&quot;#finder&quot; class=&quot;close&quot; data-rel=&quot;close&quot;&gt;close&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;minimize&quot;&gt;minimize&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;deactivate&quot;&gt;deactivate&lt;/a&gt;
+          &lt;/nav&gt;
+          &lt;h1 class=&quot;titleInside&quot;&gt;Terminal&lt;/h1&gt;
+          &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;terminal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;$&lt;/span&gt;
+&lt;span class=&quot;line-number&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;line command&quot;&gt;echo &#39;freshMRI is totally blowing my mind&#39;&lt;/span&gt;&lt;span class=&quot;line output&quot;&gt;freshMRI is totally blowing my mind&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+&lt;p&gt;Most of the code blocks in freshMRI will be copy/paste-able directly into your command window.  &lt;/p&gt;
+
+&lt;p&gt;[^1] The Mac Developer Library is amazing. Everything you want to know about your Mac and plenty that you don’t.  &lt;/p&gt;
+
+&lt;p&gt;[^2]&lt;a href=&quot;http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml&quot;&gt;In the beginning was the command line&lt;/a&gt; is the best damn essay ever written about the window to our series of tubes. As the technology of the particular era in which it was written becomes more obsolete, its lessons become oddly even more prescient. The best way to experience it is probably by invoking some arcane command that makes its text explode into a terminal window (ideally employing some code that approximates a way this task could have been accomplished in 1999)…&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://wem3.github.io/freshMRI/get-to-the-command-line/&quot;&gt;getting to the command line&lt;/a&gt; was originally published by freshMRI at &lt;a href=&quot;http://wem3.github.io/freshMRI&quot;&gt;freshMRI&lt;/a&gt; on May 22, 2014.&lt;/p&gt;</content>
+</entry>
+
+</feed>
