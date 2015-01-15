@@ -55,7 +55,7 @@ brew tap caskroom/versions
 ```
 Then install Sublime Text 3
 ```bash
-brew cask install sublime-text-3
+brew cask install sublime-text3
 ```  
 ---
 ###[XQuartz](http://xquartz.macosforge.org): X-11 interface
