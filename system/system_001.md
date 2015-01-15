@@ -16,11 +16,12 @@ A pop-up window will ask if you would like to install the tools. Select 'Install
 ---
 ###[Homebrew](brew.sh): package management for command line tools
 
-There's a GUI-based front-end now called [Cakebrew](https://www.cakebrew.com/) if you absolutely detest the command line. I haven't tested Cakebrew extensively, but have always had bad experiences in the past with graphical interfaces to package management. Use your judgment.
+There's a GUI-based front-end now called [Cakebrew](https://www.cakebrew.com/) if you absolutely detest the command line. I haven't tested Cakebrew extensively, but have always had bad experiences in the past with graphical interfaces to package management...  
 
-To install Homebrew from the line:
+
+To install Homebrew from the line (as of 15-01-14):
 ```bash
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 ```
 If everything is cool, it will return 'system ready to brew.' Otherwise, do just what the doctor orders.  
