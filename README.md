@@ -9,7 +9,7 @@ fMRI is hard. Even with a solid background in math, physics, biology, psychology
 
 If, on the other hand, you occasionally spill drinks, slip decimals, or shut down without saving, don't despair. While it's true that some fundamental knowledge of the glowbox can definitely take a lot of pain and frustration out of fMRI data analysis, you don't have to compile your own kernel from scratch (or even know what that means) to take advantage of the plethora of sweet neuroimaging software out there.
 
-That said, many of the amazing tools like [Neurosynth](neurosynth.org) or [Nipype](http://nipy.sourceforge.net/nipype) and massively shared data libraries such as [Neurovault](neurovault.org) and [OpenfMRI](https://openfmri.org) can look pretty intimidating if you have questions along the lines of "what the heck is a shell script?"  
+That said, many of the amazing tools like [Neurosynth](http://neurosynth.org) or [Nipype](http://nipy.sourceforge.net/nipype) and massively shared data libraries such as [Neurovault](http://neurovault.org) and [OpenfMRI](https://openfmri.org) can look pretty intimidating if you have questions along the lines of "what the heck is a shell script?"  
 
 freshMRI is here to facilitate the transition from clicking and pointing along according to whatever manual seems least incomprehensible to carrying out and designing your own bleeding edge neuroimaging data analyses. You can surf around the project in your browser, download a [compressed version](https://github.com/wem3/freshMRI) of all the guides and code, or make an account on [GitHub](https://github.com), [fork the repository](https://help.github.com/articles/fork-a-repo), and help keep freshMRI, err, fresh! 
 
